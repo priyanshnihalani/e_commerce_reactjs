@@ -7,13 +7,13 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCROgN7W4Syi11L0-ahn1zFdIm8LT0jcDA",
-  authDomain: "formauth-b6335.firebaseapp.com",
-  databaseURL: "https://formauth-b6335-default-rtdb.firebaseio.com",
-  projectId: "formauth-b6335",
-  storageBucket: "formauth-b6335.appspot.com",
-  messagingSenderId: "903122420104",
-  appId: "1:903122420104:web:d983862ae7dca60adeba3d"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "":,
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
