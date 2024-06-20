@@ -60,7 +60,12 @@ function Signup() {
           .then(() => navigate("/"))
           .catch((error) => console.log(error));
       } catch (error) {
-        console.log(error);
+        if(error.code == 'auth/e-mail already-in-use'){
+          alert("User Aleready exist with this credentials")
+        }
+        else{
+          alert("Someting went wrong, Try again!")
+        }
       }
     }
   };

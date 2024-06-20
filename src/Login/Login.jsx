@@ -41,7 +41,12 @@ function Login() {
         setLoading(true)
         navigate('/');
       }).catch((e) => {
-        console.log(e)
+        if (error.code === 'auth/wrong-password' || error.code === 'auth/user-not-found') {
+          alert("Username or Password is incorrect")
+        }
+        else{
+          alert("Someting went wrong, Try again.")
+        }
       }).finally(() => {
         setLoading(false)
       })
