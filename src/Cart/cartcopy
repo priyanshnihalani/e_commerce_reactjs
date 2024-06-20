@@ -1,0 +1,33 @@
+return (
+        <div className='pos w-full min-h-screen m-0'>
+            {cartItems && cartItems.length === 0 ? (
+                <div className="text-center">
+                    <img src={"shopping.png"} alt="Empty Cart Image" className='imgs absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+                    <h1 className='textpos text-gray-800 mt-3 font-bold text-[10px] md:text-lg absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[180px] md:translate-y-[250px]'>
+                        "Oops! Looks like your cart is empty. Time to do some shopping!"
+                    </h1>
+                </div>
+            ) : (
+                <div className='flex flex-col items-center w-full'>
+                    {cartItems.map((item) => (
+                        <div key={item.id} className='cart-item flex flex-col md:flex-row justify-center items-center space-x-8 m-5
+                         border-2 p-2 md:p-3 lg:p-3 rounded-lg w-[75%]'>
+                            <img src={item.image} alt={item.title} className='w-1/2 md:w-1/4 h-[100px] md:h-[200px] lg:h-[200px] xl:w-1/5 xl:h-[200px] rounded-full' />
+                            <div className='cart-item-details mt-5'>
+                                <h2 className='font-bold text-[12px] md:text-[16px]'>{item.title}</h2>
+                                <p className='mt-5  text-[14px] md:text-[18px]'>{item.description.length > 200 ? item.description.substring(0, 200) + '...' : item.description}</p>
+
+                                <div className='flex items-center space-x-3 justify-center mt-4 mr-5'>
+                                    <p className='text-[12px] md:text-[16px]'><span className='font-bold text-[14px] md:text-[16px]'>Price: </span> ${item.price}</p>
+                                    <p className='text-[12px] md:text-[16px]'><span className='font-bold text-[14px] md:text-[16px]'>Quantity: </span> {item.quantity}</p>
+                                    <button className='border-red-500 md:py-2 md:px-3 py-1 px-2 rounded border-2' onClick={() => handleDelete(item.id)}>
+                                        <FontAwesomeIcon icon={faTrash} className='text-red-600' />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
+    );

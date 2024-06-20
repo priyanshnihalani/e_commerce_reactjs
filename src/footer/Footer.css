@@ -1,0 +1,67 @@
+/* General styles for footer items */
+footer ul li {
+    color: rgb(38, 99, 240);
+}
+
+footer div div ul li:nth-child(1) {
+    font-size: 14px;
+    color: rgb(62, 62, 62);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+footer div div ul li:not(:nth-child(1)) {
+    color: rgb(114, 114, 114);
+}
+
+/* Responsive adjustments */
+@media (min-width: 320px) {
+    .mid {
+        display: none;
+    }
+    .mid1 {
+        display: none;
+    }
+    footer div div ul li:nth-child(1) {
+        font-size: 12px;
+    }
+    footer div div ul li:not(:nth-child(1)) {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 375px) {
+    .mid0 {
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 420px) {
+    .mid {
+        display: block;
+    }
+}
+
+@media (min-width: 800px) {
+    .mid1 {
+        display: block;
+    }
+}
+
+@media (min-width: 500px) {
+    footer div div ul li:nth-child(1) {
+        font-size: 16px;
+    }
+    footer div div ul li:not(:nth-child(1)) {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    footer div div ul li:nth-child(1) {
+        font-size: 17px;
+    }
+    footer div div ul li:not(:nth-child(1)) {
+        font-size: 16px;
+    }
+}
