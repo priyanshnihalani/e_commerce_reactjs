@@ -190,7 +190,9 @@ function Products() {
                     alert("Review Recorded");
                 }
                 else{
-                    navigate('/login')
+                    navigate('/login', {
+                        state: { message: "Please Sign In or Sign Up before adding to cart." }
+                    });
                 }
             });
         }
