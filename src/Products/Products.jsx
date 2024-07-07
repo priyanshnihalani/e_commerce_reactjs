@@ -188,7 +188,9 @@ function Products() {
                     })
 
                     alert("Review Recorded");
-                    window.location.reload()
+                }
+                else{
+                    navigate('/login')
                 }
             });
         }
@@ -292,13 +294,13 @@ function Products() {
                     <hr className='border w-full' />
                     <div className='flex flex-col w-full md:w-1/2 mt-3'>
                         <h1 className='font-semibold text-[18px] mt-3 mb-2'>Add a headline</h1>
-                        <input type="text" name="headline" id="" placeholder="What's most important to know?" className='border-2 text-[16px] py-1 px-2' onChange={handleChange} />
+                        <input type="text" name="headline" value={review.headline} id="" placeholder="What's most important to know?" className='border-2 text-[16px] py-1 px-2' onChange={handleChange} />
                         {errorreiveiw.headline && <p className="text-red-500 text-[14px]">{errorreiveiw.headline}</p>}
                     </div>
                     <hr className='border w-full mt-5' />
                     <div className='flex flex-col w-full md:w-1/2 mb-3 mt-4'>
                         <h1 className='font-semibold text-[18px] mt-3 mb-2'>Add a written review</h1>
-                        <textarea name="description" id="" className='border-2 text-[14px] py-[0.40rem] px-2' placeholder='what did you like or dislike? what did you use this product for?' rows={7} onChange={handleChange}></textarea>
+                        <textarea name="description" id="" className='border-2 text-[14px] py-[0.40rem] px-2' placeholder='what did you like or dislike? what did you use this product for?' rows={7} onChange={handleChange} value={review.description}></textarea>
                         {errorreiveiw.description && <p className="text-red-500 text-[14px]">{errorreiveiw.description}</p>}
                     </div>
                     <div className='flex flex-col justify m-3'>
