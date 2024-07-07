@@ -108,7 +108,7 @@ function Products() {
         auth.onAuthStateChanged(userAuth => {
             if (!userAuth) {
                 navigate('/login', {
-                    state: { message: "Please Sign In or Sign Up before buying." }
+                    state: { message: "Please Sign In or Sign Up before Reviewing the product." }
                 });
                 return
             }
